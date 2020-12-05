@@ -187,6 +187,8 @@ def clipArray(a):
 def scaleClipSum(array, scale_factor):
   return clipArray(array * scale_factor).sum()
 
+#%%  Execute on Ranch data
+
 data = readAllYears('RanchNREL_data/108335_36.45_-106.94_')
 
 insolation = computeInsolationAnnualVariable(data, lat, lon, MT, tilts_degrees, tilt_vecs, tilt_idx)
