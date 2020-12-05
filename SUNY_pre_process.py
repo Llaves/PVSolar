@@ -60,6 +60,8 @@ def readSUNYFile(filename):
                                converters={0: toStr, 1: clipPos, 2: clipPos})
   years = int(len(solar_data)/8760)
   solar_data = solar_data.reshape(years, 8760)
+  os.remove(temp_name)
   return solar_data
 
-readSUNYFile('C:/Users/David/Code/Python/PVSolar/s2/SUNY_106853645.csv/SUNY_106853645.csv')
+readSUNYFile('C:/Users/David/Code/Python/PVSolar/SUNY_Ranch_Data.csv')
+
